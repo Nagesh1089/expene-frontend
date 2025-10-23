@@ -14,7 +14,8 @@ function App() {
   const [loginForm, setLoginForm] = useState({ username: "", password: "" });
   const chartRef = useRef();
 
-  const API_URL = "http://127.0.0.1:8000/api/expenses/";
+  const API_URL = process.env.REACT_APP_API_URL + "api/expenses/";
+  // "http://127.0.0.1:8000/api/expenses/";
 
   useEffect(() => {
     if (isLoggedIn) {
